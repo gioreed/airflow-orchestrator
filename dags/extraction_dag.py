@@ -17,10 +17,10 @@ def load_data_to_bq(source_file, table_id):
         source_format=bigquery.SourceFormat.CSV,
         skip_leading_rows=1,
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
-        max_bad_records=100000,  # Adjust as needed
+        max_bad_records=100000,  # Adjusted for broken records
         ignore_unknown_values=True,
         autodetect=True,
-        encoding="UTF-8",  # Best for a wide variety of characters
+        encoding="UTF-8", 
     )
     
     uri = f"gs://eltl-project-raw-data/{source_file}"
@@ -40,7 +40,7 @@ with DAG(
     catchup=False,
 ) as dag:
 
-    # Tasks to load each CSV to BigQuery
+# Tasks to load each CSV to BigQuery
     load_vbak_task = PythonOperator(
         task_id='load_vbak_to_bq',
         python_callable=load_data_to_bq,
