@@ -47585,3 +47585,192 @@ File Path                                                         PID  Runtime  
 /opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.86s           2024-11-05T15:26:53
 /opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:26:48
 ================================================================================
+[2024-11-05T16:27:23.473+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.92s           2024-11-05T15:27:23
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              35880  0.67s             1           0  0.93s           2024-11-05T15:27:22
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  35886  0.01s             1           0  0.99s           2024-11-05T15:27:22
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.23s           2024-11-05T15:27:20
+================================================================================
+[2024-11-05T16:27:53.925+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.92s           2024-11-05T15:27:53
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              36263  0.75s             1           0  1.20s           2024-11-05T15:27:53
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  36269  0.01s             1           0  0.92s           2024-11-05T15:27:52
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.28s           2024-11-05T15:27:51
+================================================================================
+[2024-11-05T16:28:24.346+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             36610  0.01s             1           0  1.13s           2024-11-05T15:28:23
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              36604  0.46s             1           0  1.23s           2024-11-05T15:28:23
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.98s           2024-11-05T15:28:24
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.26s           2024-11-05T15:28:23
+================================================================================
+[2024-11-05T16:28:54.627+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.89s           2024-11-05T15:28:54
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              37012  0.01s             1           0  0.88s           2024-11-05T15:28:54
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  37006  0.34s             1           0  0.90s           2024-11-05T15:28:53
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.26s           2024-11-05T15:28:23
+================================================================================
+[2024-11-05T16:29:24.726+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             37407  0.66s             1           0  0.89s           2024-11-05T15:29:23
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              37413  0.01s             1           0  0.90s           2024-11-05T15:29:24
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.89s           2024-11-05T15:29:24
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:28:55
+================================================================================
+[2024-11-05T16:29:54.867+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             37820  0.01s             1           0  0.89s           2024-11-05T15:29:53
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              37814  0.25s             1           0  0.88s           2024-11-05T15:29:54
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.90s           2024-11-05T15:29:54
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:29:27
+================================================================================
+[2024-11-05T16:30:25.127+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.94s           2024-11-05T15:30:25
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              38196  0.91s             1           0  0.90s           2024-11-05T15:30:24
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  38203  0.01s             1           0  0.93s           2024-11-05T15:30:24
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.22s           2024-11-05T15:29:59
+================================================================================
+[2024-11-05T16:30:55.518+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             38604  0.01s             1           0  0.88s           2024-11-05T15:30:54
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              38598  0.73s             1           0  0.87s           2024-11-05T15:30:54
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.89s           2024-11-05T15:30:55
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:30:30
+================================================================================
+[2024-11-05T16:31:25.941+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             38981  1.02s             1           0  1.14s           2024-11-05T15:31:23
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              38986  0.88s             1           0  1.10s           2024-11-05T15:31:25
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  1.28s           2024-11-05T15:31:24
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.20s           2024-11-05T15:31:02
+================================================================================
+[2024-11-05T16:31:35.200+0100] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2024-11-05T16:31:35.205+0100] {manager.py:729} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-05T16:31:56.057+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             39322  0.01s             1           0  1.03s           2024-11-05T15:31:55
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              39316  0.32s             1           0  0.91s           2024-11-05T15:31:55
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.90s           2024-11-05T15:31:56
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.30s           2024-11-05T15:31:34
+================================================================================
+[2024-11-05T16:32:26.202+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.90s           2024-11-05T15:32:26
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              39717  0.22s             1           0  0.87s           2024-11-05T15:32:25
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  39723  0.01s             1           0  0.89s           2024-11-05T15:32:25
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:32:05
+================================================================================
+[2024-11-05T16:32:56.707+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.88s           2024-11-05T15:32:55
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              40124  0.01s             1           0  0.87s           2024-11-05T15:32:56
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  40117  0.78s             1           0  0.89s           2024-11-05T15:32:55
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.23s           2024-11-05T15:32:37
+================================================================================
+[2024-11-05T16:33:26.932+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             40525  0.01s             1           0  0.89s           2024-11-05T15:33:26
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              40518  0.77s             1           0  0.88s           2024-11-05T15:33:26
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.89s           2024-11-05T15:33:26
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:33:09
+================================================================================
+[2024-11-05T16:33:57.280+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             40913  0.76s             1           0  0.92s           2024-11-05T15:33:55
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              40920  0.01s             1           0  0.87s           2024-11-05T15:33:57
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.90s           2024-11-05T15:33:56
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:33:40
+================================================================================
+[2024-11-05T16:34:27.918+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             41309  0.01s             1           0  0.87s           2024-11-05T15:34:27
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              41302  0.74s             1           0  0.86s           2024-11-05T15:34:27
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.88s           2024-11-05T15:34:27
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.23s           2024-11-05T15:34:12
+================================================================================
+[2024-11-05T16:34:58.192+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                                                      1           0  0.93s           2024-11-05T15:34:58
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              41704  0.69s             1           0  0.91s           2024-11-05T15:34:57
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py  41710  0.01s             1           0  0.91s           2024-11-05T15:34:57
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:34:44
+================================================================================
+[2024-11-05T16:35:28.446+0100] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/extraction_dag.py                             42111  0.01s             1           0  0.88s           2024-11-05T15:35:27
+/opt/airflow/dags/extraction_dag_with_dq_checks.py              42105  0.69s             1           0  0.87s           2024-11-05T15:35:27
+/opt/airflow/dags/extraction_dag_with_staging_and_dq_checks.py                           1           0  0.89s           2024-11-05T15:35:28
+/opt/airflow/dags/airbyte_dag_full.py                                                    1           0  0.21s           2024-11-05T15:35:15
+================================================================================
