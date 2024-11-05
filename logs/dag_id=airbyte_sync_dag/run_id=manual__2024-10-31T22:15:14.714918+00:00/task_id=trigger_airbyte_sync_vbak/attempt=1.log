@@ -1,0 +1,421 @@
+[2024-10-31T23:15:15.426+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak manual__2024-10-31T22:15:14.714918+00:00 [queued]>
+[2024-10-31T23:15:15.445+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak manual__2024-10-31T22:15:14.714918+00:00 [queued]>
+[2024-10-31T23:15:15.445+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-31T23:15:15.446+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-31T23:15:15.446+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-31T23:15:15.472+0100] {taskinstance.py:1304} INFO - Executing <Task(AirbyteTriggerSyncOperator): trigger_airbyte_sync_vbak> on 2024-10-31 22:15:14.714918+00:00
+[2024-10-31T23:15:15.490+0100] {standard_task_runner.py:55} INFO - Started process 125370 to run task
+[2024-10-31T23:15:15.504+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'airbyte_sync_dag', 'trigger_airbyte_sync_vbak', 'manual__2024-10-31T22:15:14.714918+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/airbyte_dag.py', '--cfg-path', '/tmp/tmpnb_jqsc7']
+[2024-10-31T23:15:15.507+0100] {standard_task_runner.py:83} INFO - Job 81: Subtask trigger_airbyte_sync_vbak
+[2024-10-31T23:15:15.620+0100] {task_command.py:389} INFO - Running <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak manual__2024-10-31T22:15:14.714918+00:00 [running]> on host a9b91f8e80c6
+[2024-10-31T23:15:15.762+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=airbyte_sync_dag
+AIRFLOW_CTX_TASK_ID=trigger_airbyte_sync_vbak
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-31T22:15:14.714918+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-31T22:15:14.714918+00:00
+[2024-10-31T23:15:15.780+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:15.784+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/connections/sync
+[2024-10-31T23:15:16.646+0100] {airbyte.py:77} INFO - Job 34 was submitted to Airbyte Server
+[2024-10-31T23:15:16.647+0100] {airbyte.py:79} INFO - Waiting for job 34 to complete
+[2024-10-31T23:15:19.662+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:19.664+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:22.703+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:22.708+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:25.758+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:25.761+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:28.811+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:28.813+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:31.863+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:31.865+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:34.902+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:34.905+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:37.956+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:37.964+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:41.010+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:41.017+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:44.080+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:44.085+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:47.128+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:47.130+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:50.169+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:50.172+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:53.222+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:53.224+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:56.270+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:56.271+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:15:59.310+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:15:59.312+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:02.365+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:02.367+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:05.419+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:05.422+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:08.473+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:08.475+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:11.581+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:11.583+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:14.649+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:14.651+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:17.894+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:17.896+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:21.006+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:21.008+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:24.062+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:24.064+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:27.110+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:27.112+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:30.165+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:30.167+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:33.222+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:33.223+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:36.272+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:36.273+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:39.326+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:39.328+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:42.375+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:42.377+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:45.437+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:45.438+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:48.486+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:48.488+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:51.540+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:51.543+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:54.592+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:54.593+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:16:57.647+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:16:57.648+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:00.695+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:00.697+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:03.824+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:03.826+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:06.924+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:06.926+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:10.019+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:10.021+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:13.074+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:13.076+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:16.163+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:16.165+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:19.269+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:19.270+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:22.369+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:22.371+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:25.457+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:25.459+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:28.563+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:28.565+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:31.657+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:31.660+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:34.758+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:34.760+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:37.863+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:37.867+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:40.963+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:40.965+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:44.057+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:44.059+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:47.159+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:47.160+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:50.266+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:50.268+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:53.371+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:53.373+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:56.423+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:56.425+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:17:59.525+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:17:59.526+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:02.663+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:02.664+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:05.762+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:05.764+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:08.861+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:08.862+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:11.963+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:11.965+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:15.020+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:15.022+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:18.126+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:18.128+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:21.220+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:21.222+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:24.322+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:24.323+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:27.464+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:27.466+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:30.566+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:30.568+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:33.627+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:33.629+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:36.768+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:36.770+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:39.870+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:39.872+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:42.971+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:42.973+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:46.078+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:46.079+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:49.222+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:49.224+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:52.364+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:52.366+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:55.472+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:55.474+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:18:58.526+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:18:58.528+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:01.772+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:01.774+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:04.939+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:04.941+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:08.081+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:08.090+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:11.272+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:11.278+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:14.461+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:14.464+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:17.576+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:17.578+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:20.732+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:20.734+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:23.894+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:23.896+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:27.029+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:27.030+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:30.174+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:30.178+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:33.332+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:33.335+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:36.487+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:36.490+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:39.674+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:39.676+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:42.829+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:42.831+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:45.989+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:45.991+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:49.141+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:49.143+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:52.301+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:52.307+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:55.487+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:55.490+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:19:58.767+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:19:58.771+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:01.942+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:01.948+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:05.412+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:05.414+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:08.667+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:08.668+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:11.966+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:11.968+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:15.182+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:15.184+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:18.435+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:18.437+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:21.680+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:21.682+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:24.964+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:24.966+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:28.225+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:28.227+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:31.561+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:31.562+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:34.777+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:34.779+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:38.032+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:38.034+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:41.361+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:41.363+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:44.579+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:44.581+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:47.827+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:47.829+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:51.075+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:51.077+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:54.330+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:54.332+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:20:57.576+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:20:57.578+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:00.821+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:00.823+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:04.077+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:04.079+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:07.363+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:07.365+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:10.665+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:10.667+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:13.972+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:13.974+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:17.226+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:17.231+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:20.573+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:20.575+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:23.831+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:23.833+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:27.080+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:27.082+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:30.365+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:30.366+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:33.622+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:33.624+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:36.923+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:36.927+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:40.179+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:40.181+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:43.430+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:43.432+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:46.765+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:46.767+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:49.984+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:49.985+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:53.320+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:53.321+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:56.569+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:56.571+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:21:59.826+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:21:59.827+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:03.080+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:03.082+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:06.421+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:06.422+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:09.671+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:09.673+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:12.979+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:12.981+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:16.325+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:16.327+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:19.578+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:19.580+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:22.927+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:22.928+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:26.275+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:26.277+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:29.567+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:29.569+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:32.863+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:32.865+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:36.127+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:36.129+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:39.466+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:39.469+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:42.764+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:42.766+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:46.068+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:46.069+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:49.321+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:49.323+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:52.666+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:52.668+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:55.974+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:55.975+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:22:59.327+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:22:59.329+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:02.875+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:02.877+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:06.174+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:06.175+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:09.427+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:09.429+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:12.712+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:12.716+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:15.989+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:15.990+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:19.282+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:19.284+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:22.645+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:22.650+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:26.089+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:26.092+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:29.435+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:29.437+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:32.864+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:32.867+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:36.198+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:36.200+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:39.633+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:39.635+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:42.995+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:42.998+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:46.344+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:46.346+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:49.590+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:49.592+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:52.937+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:52.940+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:56.287+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:56.293+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:23:59.689+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:23:59.695+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:03.290+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:03.293+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:06.646+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:06.648+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:09.990+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:09.992+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:13.431+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:13.432+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:16.876+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:16.878+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:20.334+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:20.336+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:23.770+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:23.772+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:27.176+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:27.178+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:30.566+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:30.568+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:33.966+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:33.968+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:37.379+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:37.381+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:40.835+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:40.837+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:44.368+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:44.370+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:47.821+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:47.823+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:51.324+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:51.326+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:54.723+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:54.724+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:24:58.180+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:24:58.182+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:01.633+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:01.635+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:05.073+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:05.075+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:08.465+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:08.467+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:11.876+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:11.877+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:15.338+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:15.340+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:18.775+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:18.777+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/get
+[2024-10-31T23:25:19.229+0100] {local_task_job.py:224} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2024-10-31T23:25:19.234+0100] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 125370. PIDs of all processes in the group: [125370]
+[2024-10-31T23:25:19.235+0100] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 125370
+[2024-10-31T23:25:19.235+0100] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-31T23:25:19.236+0100] {airbyte.py:88} INFO - on_kill: cancel the airbyte Job 34
+[2024-10-31T23:25:19.248+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:25:19.250+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/jobs/cancel
+[2024-10-31T23:26:08.290+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/operators/airbyte.py", line 80, in execute
+    self.hook.wait_for_job(job_id=self.job_id, wait_seconds=self.wait_seconds, timeout=self.timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 67, in wait_for_job
+    time.sleep(wait_seconds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-10-31T23:26:08.316+0100] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=airbyte_sync_dag, task_id=trigger_airbyte_sync_vbak, execution_date=20241031T221514, start_date=20241031T221515, end_date=20241031T222608
+[2024-10-31T23:26:08.343+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 81 for task trigger_airbyte_sync_vbak ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(airbyte_sync_dag, trigger_airbyte_sync_vbak, manual__2024-10-31T22:15:14.714918+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'trigger_airbyte_sync_vbak', 'dag_id': 'airbyte_sync_dag', 'run_id': 'manual__2024-10-31T22:15:14.714918+00:00', 'map_index': -1, 'start_date': datetime.datetime(2024, 10, 31, 22, 15, 15, 433413, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2024, 10, 31, 22, 26, 8, 315554, tzinfo=Timezone('UTC')), 'duration': 652}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 125370)
+[2024-10-31T23:26:08.367+0100] {process_utils.py:79} INFO - Process psutil.Process(pid=125370, status='terminated', exitcode=1, started='23:15:15') (125370) terminated with exit code 1

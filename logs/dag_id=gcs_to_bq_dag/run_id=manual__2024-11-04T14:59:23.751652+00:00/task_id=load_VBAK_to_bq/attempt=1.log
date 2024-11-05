@@ -1,0 +1,38 @@
+[2024-11-04T15:59:26.853+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.load_VBAK_to_bq manual__2024-11-04T14:59:23.751652+00:00 [queued]>
+[2024-11-04T15:59:26.874+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.load_VBAK_to_bq manual__2024-11-04T14:59:23.751652+00:00 [queued]>
+[2024-11-04T15:59:26.874+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T15:59:26.874+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-11-04T15:59:26.874+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T15:59:26.897+0100] {taskinstance.py:1304} INFO - Executing <Task(GCSToBigQueryOperator): load_VBAK_to_bq> on 2024-11-04 14:59:23.751652+00:00
+[2024-11-04T15:59:26.908+0100] {standard_task_runner.py:55} INFO - Started process 537 to run task
+[2024-11-04T15:59:26.915+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'load_VBAK_to_bq', 'manual__2024-11-04T14:59:23.751652+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/extraction_dag.py', '--cfg-path', '/tmp/tmprw4zq8g4']
+[2024-11-04T15:59:26.919+0100] {standard_task_runner.py:83} INFO - Job 131: Subtask load_VBAK_to_bq
+[2024-11-04T15:59:27.054+0100] {task_command.py:389} INFO - Running <TaskInstance: gcs_to_bq_dag.load_VBAK_to_bq manual__2024-11-04T14:59:23.751652+00:00 [running]> on host 5378767400c7
+[2024-11-04T15:59:27.188+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=load_VBAK_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-04T14:59:23.751652+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-11-04T14:59:23.751652+00:00
+[2024-11-04T15:59:27.217+0100] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-04T15:59:27.248+0100] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-04T15:59:27.249+0100] {gcs_to_bigquery.py:367} INFO - Using existing BigQuery table for storing data...
+[2024-11-04T15:59:27.272+0100] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-04T15:59:28.544+0100] {gcs_to_bigquery.py:397} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'eltl-pipeline-project', 'datasetId': 'staging', 'tableId': 'VBAK'}, 'destinationTableProperties': {'description': None, 'labels': None}, 'sourceFormat': 'CSV', 'skipLeadingRows': 1, 'sourceUris': ['gs://eltl-project-raw-data/vbak.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': True, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2024-11-04T15:59:28.545+0100] {bigquery.py:1539} INFO - Inserting job ***_gcs_to_bq_dag_load_VBAK_to_bq_2024_11_04T14_59_23_751652_00_00_d54193f1d1f34656abbd456e43e21ce0
+[2024-11-04T15:59:32.599+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 456, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Error while reading data, error message: CSV processing encountered too many errors, giving up. Rows: 39910; errors: 2; max bad: 0; error percent: 0
+[2024-11-04T15:59:32.613+0100] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=gcs_to_bq_dag, task_id=load_VBAK_to_bq, execution_date=20241104T145923, start_date=20241104T145926, end_date=20241104T145932
+[2024-11-04T15:59:32.631+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 131 for task load_VBAK_to_bq (400 Error while reading data, error message: CSV processing encountered too many errors, giving up. Rows: 39910; errors: 2; max bad: 0; error percent: 0; 537)
+[2024-11-04T15:59:32.657+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-11-04T15:59:32.701+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

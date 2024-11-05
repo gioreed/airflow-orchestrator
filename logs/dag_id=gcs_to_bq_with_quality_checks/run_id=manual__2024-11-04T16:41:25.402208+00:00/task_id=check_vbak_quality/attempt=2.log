@@ -1,0 +1,42 @@
+[2024-11-04T17:46:48.482+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:41:25.402208+00:00 [queued]>
+[2024-11-04T17:46:48.513+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:41:25.402208+00:00 [queued]>
+[2024-11-04T17:46:48.514+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:46:48.514+0100] {taskinstance.py:1284} INFO - Starting attempt 2 of 2
+[2024-11-04T17:46:48.515+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:46:48.543+0100] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): check_vbak_quality> on 2024-11-04 16:41:25.402208+00:00
+[2024-11-04T17:46:48.557+0100] {standard_task_runner.py:55} INFO - Started process 14612 to run task
+[2024-11-04T17:46:48.565+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_with_quality_checks', 'check_vbak_quality', 'manual__2024-11-04T16:41:25.402208+00:00', '--job-id', '165', '--raw', '--subdir', 'DAGS_FOLDER/extraction_dag_with_dq_checks.py', '--cfg-path', '/tmp/tmp_1irqra2']
+[2024-11-04T17:46:48.570+0100] {standard_task_runner.py:83} INFO - Job 165: Subtask check_vbak_quality
+[2024-11-04T17:46:48.697+0100] {task_command.py:389} INFO - Running <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:41:25.402208+00:00 [running]> on host e0d728679b7b
+[2024-11-04T17:46:48.858+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_with_quality_checks
+AIRFLOW_CTX_TASK_ID=check_vbak_quality
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-04T16:41:25.402208+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-11-04T16:41:25.402208+00:00
+[2024-11-04T17:46:55.591+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extraction_dag_with_dq_checks.py", line 55, in validate_data_quality
+    error_table = client.get_table(error_table_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 1040, in get_table
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 GET https://bigquery.googleapis.com/bigquery/v2/projects/eltl-pipeline-project/datasets/staging/tables/data_quality_errors?prettyPrint=false: Not found: Table eltl-pipeline-project:staging.data_quality_errors
+[2024-11-04T17:46:55.611+0100] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=gcs_to_bq_with_quality_checks, task_id=check_vbak_quality, execution_date=20241104T164125, start_date=20241104T164648, end_date=20241104T164655
+[2024-11-04T17:46:55.638+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 165 for task check_vbak_quality (404 GET https://bigquery.googleapis.com/bigquery/v2/projects/eltl-pipeline-project/datasets/staging/tables/data_quality_errors?prettyPrint=false: Not found: Table eltl-pipeline-project:staging.data_quality_errors; 14612)
+[2024-11-04T17:46:55.852+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-11-04T17:46:55.895+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

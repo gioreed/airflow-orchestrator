@@ -1,0 +1,49 @@
+[2024-10-31T23:00:00.824+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak scheduled__2024-10-31T21:00:00+00:00 [queued]>
+[2024-10-31T23:00:00.850+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak scheduled__2024-10-31T21:00:00+00:00 [queued]>
+[2024-10-31T23:00:00.851+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-31T23:00:00.851+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-31T23:00:00.851+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-31T23:00:00.874+0100] {taskinstance.py:1304} INFO - Executing <Task(AirbyteTriggerSyncOperator): trigger_airbyte_sync_vbak> on 2024-10-31 21:00:00+00:00
+[2024-10-31T23:00:00.885+0100] {standard_task_runner.py:55} INFO - Started process 112766 to run task
+[2024-10-31T23:00:00.890+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'airbyte_sync_dag', 'trigger_airbyte_sync_vbak', 'scheduled__2024-10-31T21:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/airbyte_dag.py', '--cfg-path', '/tmp/tmp_ugw6tzm']
+[2024-10-31T23:00:00.893+0100] {standard_task_runner.py:83} INFO - Job 78: Subtask trigger_airbyte_sync_vbak
+[2024-10-31T23:00:01.003+0100] {task_command.py:389} INFO - Running <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_vbak scheduled__2024-10-31T21:00:00+00:00 [running]> on host a9b91f8e80c6
+[2024-10-31T23:00:01.116+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=airbyte_sync_dag
+AIRFLOW_CTX_TASK_ID=trigger_airbyte_sync_vbak
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-31T21:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-31T21:00:00+00:00
+[2024-10-31T23:00:01.133+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-10-31T23:00:01.138+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/connections/sync
+[2024-10-31T23:00:01.205+0100] {http.py:163} ERROR - HTTP error: Conflict
+[2024-10-31T23:00:01.206+0100] {http.py:164} ERROR - {"message":"A sync is already running for: 0e1f6143-f01a-45b7-aba2-569a32e74413","exceptionClassName":"io.airbyte.commons.server.errors.ValueConflictKnownException","exceptionStack":["io.airbyte.commons.server.errors.ValueConflictKnownException: A sync is already running for: 0e1f6143-f01a-45b7-aba2-569a32e74413","\tat io.airbyte.commons.server.handlers.SchedulerHandler.readJobFromResult(SchedulerHandler.java:804)","\tat io.airbyte.commons.server.handlers.SchedulerHandler.submitManualSyncToWorker(SchedulerHandler.java:772)","\tat io.airbyte.commons.server.handlers.SchedulerHandler.syncConnection(SchedulerHandler.java:608)","\tat io.airbyte.server.apis.ConnectionApiController.lambda$syncConnection$22(ConnectionApiController.java:307)","\tat io.airbyte.server.apis.ApiHelper.execute(ApiHelper.java:28)","\tat io.airbyte.server.apis.ConnectionApiController.syncConnection(ConnectionApiController.java:307)","\tat io.airbyte.server.apis.$ConnectionApiController$Definition$Exec.dispatch(Unknown Source)","\tat io.micronaut.context.AbstractExecutableMethodsDefinition$DispatchedExecutableMethod.invokeUnsafe(AbstractExecutableMethodsDefinition.java:461)","\tat io.micronaut.context.DefaultBeanContext$BeanContextUnsafeExecutionHandle.invokeUnsafe(DefaultBeanContext.java:4350)","\tat io.micronaut.web.router.AbstractRouteMatch.execute(AbstractRouteMatch.java:272)","\tat io.micronaut.web.router.DefaultUriRouteMatch.execute(DefaultUriRouteMatch.java:38)","\tat io.micronaut.http.server.RouteExecutor.executeRouteAndConvertBody(RouteExecutor.java:498)","\tat io.micronaut.http.server.RouteExecutor.lambda$callRoute$5(RouteExecutor.java:475)","\tat io.micronaut.core.execution.ExecutionFlow.lambda$async$1(ExecutionFlow.java:87)","\tat io.micronaut.core.propagation.PropagatedContext.lambda$wrap$3(PropagatedContext.java:211)","\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)","\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)","\tat java.base/java.lang.Thread.run(Thread.java:1583)"],"rootCauseExceptionStack":[]}
+[2024-10-31T23:00:01.221+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 161, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http://10.132.0.2:8000/api/v1/connections/sync
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/operators/airbyte.py", line 74, in execute
+    job_object = self.hook.submit_sync_connection(connection_id=self.connection_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 95, in submit_sync_connection
+    headers={"accept": "application/json"},
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 151, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 204, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 165, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 409:Conflict
+[2024-10-31T23:00:01.229+0100] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=airbyte_sync_dag, task_id=trigger_airbyte_sync_vbak, execution_date=20241031T210000, start_date=20241031T220000, end_date=20241031T220001
+[2024-10-31T23:00:01.252+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 78 for task trigger_airbyte_sync_vbak (409:Conflict; 112766)
+[2024-10-31T23:00:01.304+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-31T23:00:01.374+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

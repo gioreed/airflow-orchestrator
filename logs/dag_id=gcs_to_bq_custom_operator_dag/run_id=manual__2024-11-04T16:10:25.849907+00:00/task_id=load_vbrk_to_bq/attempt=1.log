@@ -1,0 +1,36 @@
+[2024-11-04T17:10:53.980+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_custom_operator_dag.load_vbrk_to_bq manual__2024-11-04T16:10:25.849907+00:00 [queued]>
+[2024-11-04T17:10:54.002+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_custom_operator_dag.load_vbrk_to_bq manual__2024-11-04T16:10:25.849907+00:00 [queued]>
+[2024-11-04T17:10:54.002+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:10:54.002+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-11-04T17:10:54.003+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:10:54.035+0100] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): load_vbrk_to_bq> on 2024-11-04 16:10:25.849907+00:00
+[2024-11-04T17:10:54.045+0100] {standard_task_runner.py:55} INFO - Started process 672 to run task
+[2024-11-04T17:10:54.050+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_custom_operator_dag', 'load_vbrk_to_bq', 'manual__2024-11-04T16:10:25.849907+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/extraction_dag.py', '--cfg-path', '/tmp/tmprz6dk9lc']
+[2024-11-04T17:10:54.053+0100] {standard_task_runner.py:83} INFO - Job 146: Subtask load_vbrk_to_bq
+[2024-11-04T17:10:54.146+0100] {task_command.py:389} INFO - Running <TaskInstance: gcs_to_bq_custom_operator_dag.load_vbrk_to_bq manual__2024-11-04T16:10:25.849907+00:00 [running]> on host b222f5fac3f3
+[2024-11-04T17:10:54.502+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_custom_operator_dag
+AIRFLOW_CTX_TASK_ID=load_vbrk_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-04T16:10:25.849907+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-11-04T16:10:25.849907+00:00
+[2024-11-04T17:11:05.446+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extraction_dag.py", line 30, in load_data_to_bq
+    load_job.result()  # Wait for the job to complete
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Error while reading data, error message: CSV table encountered too many errors, giving up. Rows: 61463; errors: 10001. Please look into the errors[] collection for more details. File: gs://eltl-project-raw-data/vbrk.csv
+[2024-11-04T17:11:05.468+0100] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=gcs_to_bq_custom_operator_dag, task_id=load_vbrk_to_bq, execution_date=20241104T161025, start_date=20241104T161053, end_date=20241104T161105
+[2024-11-04T17:11:05.500+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 146 for task load_vbrk_to_bq (400 Error while reading data, error message: CSV table encountered too many errors, giving up. Rows: 61463; errors: 10001. Please look into the errors[] collection for more details. File: gs://eltl-project-raw-data/vbrk.csv; 672)
+[2024-11-04T17:11:05.538+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-11-04T17:11:05.591+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

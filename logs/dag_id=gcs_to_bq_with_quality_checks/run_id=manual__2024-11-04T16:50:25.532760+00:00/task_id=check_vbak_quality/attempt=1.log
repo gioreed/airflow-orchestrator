@@ -1,0 +1,53 @@
+[2024-11-04T17:50:36.013+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:50:25.532760+00:00 [queued]>
+[2024-11-04T17:50:36.035+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:50:25.532760+00:00 [queued]>
+[2024-11-04T17:50:36.036+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:50:36.036+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-11-04T17:50:36.036+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T17:50:36.057+0100] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): check_vbak_quality> on 2024-11-04 16:50:25.532760+00:00
+[2024-11-04T17:50:36.069+0100] {standard_task_runner.py:55} INFO - Started process 17479 to run task
+[2024-11-04T17:50:36.076+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_with_quality_checks', 'check_vbak_quality', 'manual__2024-11-04T16:50:25.532760+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/extraction_dag_with_dq_checks.py', '--cfg-path', '/tmp/tmp0wbhah_l']
+[2024-11-04T17:50:36.079+0100] {standard_task_runner.py:83} INFO - Job 167: Subtask check_vbak_quality
+[2024-11-04T17:50:36.207+0100] {task_command.py:389} INFO - Running <TaskInstance: gcs_to_bq_with_quality_checks.check_vbak_quality manual__2024-11-04T16:50:25.532760+00:00 [running]> on host e0d728679b7b
+[2024-11-04T17:50:36.376+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_with_quality_checks
+AIRFLOW_CTX_TASK_ID=check_vbak_quality
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-04T16:50:25.532760+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-11-04T16:50:25.532760+00:00
+[2024-11-04T17:50:36.675+0100] {logging_mixin.py:137} INFO - Created table eltl-pipeline-project.staging.data_quality_errors for storing data quality errors.
+[2024-11-04T17:50:37.145+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extraction_dag_with_dq_checks.py", line 68, in validate_data_quality
+    query_job.result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Unrecognized name: column_name at [8:15]
+
+Location: europe-west1
+Job ID: 5a262906-6131-4baa-86c6-487daeaab7a6
+
+[2024-11-04T17:50:37.165+0100] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=gcs_to_bq_with_quality_checks, task_id=check_vbak_quality, execution_date=20241104T165025, start_date=20241104T165036, end_date=20241104T165037
+[2024-11-04T17:50:37.192+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 167 for task check_vbak_quality (400 Unrecognized name: column_name at [8:15]
+
+Location: europe-west1
+Job ID: 5a262906-6131-4baa-86c6-487daeaab7a6
+; 17479)
+[2024-11-04T17:50:37.213+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-11-04T17:50:37.252+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,44 @@
+[2024-10-28T18:05:03.684+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_dag.run_airbyte_container scheduled__2024-10-28T16:00:00+00:00 [queued]>
+[2024-10-28T18:05:03.715+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_dag.run_airbyte_container scheduled__2024-10-28T16:00:00+00:00 [queued]>
+[2024-10-28T18:05:03.715+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-28T18:05:03.716+0100] {taskinstance.py:1284} INFO - Starting attempt 2 of 2
+[2024-10-28T18:05:03.716+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-28T18:05:03.744+0100] {taskinstance.py:1304} INFO - Executing <Task(DockerOperator): run_airbyte_container> on 2024-10-28 16:00:00+00:00
+[2024-10-28T18:05:03.752+0100] {standard_task_runner.py:55} INFO - Started process 14661 to run task
+[2024-10-28T18:05:03.759+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'airbyte_dag', 'run_airbyte_container', 'scheduled__2024-10-28T16:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/airbyte_dag.py', '--cfg-path', '/tmp/tmpdysocfv6']
+[2024-10-28T18:05:03.764+0100] {standard_task_runner.py:83} INFO - Job 19: Subtask run_airbyte_container
+[2024-10-28T18:05:03.888+0100] {task_command.py:389} INFO - Running <TaskInstance: airbyte_dag.run_airbyte_container scheduled__2024-10-28T16:00:00+00:00 [running]> on host 0fa5b0a4899a
+[2024-10-28T18:05:04.023+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=airbyte_dag
+AIRFLOW_CTX_TASK_ID=run_airbyte_container
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-28T16:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-28T16:00:00+00:00
+[2024-10-28T18:05:04.054+0100] {docker.py:414} INFO - Pulling docker image airbyte/airbyte
+[2024-10-28T18:05:05.092+0100] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.47/images/create?tag=latest&fromImage=airbyte%2Fairbyte
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 416, in execute
+    for output in self.cli.pull(self.image, stream=True, decode=True):
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/image.py", line 429, in pull
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.7/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.ImageNotFound: 404 Client Error for http+docker://localhost/v1.47/images/create?tag=latest&fromImage=airbyte%2Fairbyte: Not Found ("pull access denied for airbyte/airbyte, repository does not exist or may require 'docker login': denied: requested access to the resource is denied")
+[2024-10-28T18:05:05.109+0100] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=airbyte_dag, task_id=run_airbyte_container, execution_date=20241028T160000, start_date=20241028T170503, end_date=20241028T170505
+[2024-10-28T18:05:05.133+0100] {standard_task_runner.py:105} ERROR - Failed to execute job 19 for task run_airbyte_container (404 Client Error for http+docker://localhost/v1.47/images/create?tag=latest&fromImage=airbyte%2Fairbyte: Not Found ("pull access denied for airbyte/airbyte, repository does not exist or may require 'docker login': denied: requested access to the resource is denied"); 14661)
+[2024-10-28T18:05:05.175+0100] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-28T18:05:05.276+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

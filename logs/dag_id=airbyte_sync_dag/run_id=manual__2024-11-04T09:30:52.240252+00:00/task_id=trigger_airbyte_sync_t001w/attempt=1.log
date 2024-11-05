@@ -1,0 +1,25 @@
+[2024-11-04T10:31:47.447+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_t001w manual__2024-11-04T09:30:52.240252+00:00 [queued]>
+[2024-11-04T10:31:47.496+0100] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_t001w manual__2024-11-04T09:30:52.240252+00:00 [queued]>
+[2024-11-04T10:31:47.497+0100] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T10:31:47.497+0100] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-11-04T10:31:47.498+0100] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-04T10:31:47.533+0100] {taskinstance.py:1304} INFO - Executing <Task(AirbyteTriggerSyncOperator): trigger_airbyte_sync_t001w> on 2024-11-04 09:30:52.240252+00:00
+[2024-11-04T10:31:47.546+0100] {standard_task_runner.py:55} INFO - Started process 4299 to run task
+[2024-11-04T10:31:47.559+0100] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'airbyte_sync_dag', 'trigger_airbyte_sync_t001w', 'manual__2024-11-04T09:30:52.240252+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/airbyte_dag.py', '--cfg-path', '/tmp/tmppapnjuo1']
+[2024-11-04T10:31:47.564+0100] {standard_task_runner.py:83} INFO - Job 109: Subtask trigger_airbyte_sync_t001w
+[2024-11-04T10:31:47.736+0100] {task_command.py:389} INFO - Running <TaskInstance: airbyte_sync_dag.trigger_airbyte_sync_t001w manual__2024-11-04T09:30:52.240252+00:00 [running]> on host bd78ac0fb717
+[2024-11-04T10:31:47.996+0100] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=airbyte_sync_dag
+AIRFLOW_CTX_TASK_ID=trigger_airbyte_sync_t001w
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-04T09:30:52.240252+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-11-04T09:30:52.240252+00:00
+[2024-11-04T10:31:48.036+0100] {base.py:73} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-11-04T10:31:48.043+0100] {http.py:150} INFO - Sending 'POST' to url: http://10.132.0.2:8000/api/v1/connections/sync
+[2024-11-04T10:31:51.979+0100] {airbyte.py:77} INFO - Job 53 was submitted to Airbyte Server
+[2024-11-04T10:31:52.095+0100] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=airbyte_sync_dag, task_id=trigger_airbyte_sync_t001w, execution_date=20241104T093052, start_date=20241104T093147, end_date=20241104T093152
+[2024-11-04T10:31:52.181+0100] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-11-04T10:31:52.323+0100] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
