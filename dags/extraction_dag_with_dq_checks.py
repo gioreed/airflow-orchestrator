@@ -18,7 +18,7 @@ def load_data_to_bq(source_file, table_id):
         source_format=bigquery.SourceFormat.CSV,
         skip_leading_rows=1,
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
-        max_bad_records=100000,  # Adjust as needed
+        max_bad_records=100000,
         ignore_unknown_values=True,
         autodetect=True,
         encoding="UTF-8",
@@ -34,7 +34,7 @@ def load_data_to_bq(source_file, table_id):
 def validate_data_quality(source_table_id, error_table_id, source_file):
     client = bigquery.Client()
     
-    # Create the data_quality_errors table if it doesn't exist
+    # Check if data_quality_errors table exists, if not, create it with schema
     try:
         client.get_table(error_table_id)
     except exceptions.NotFound:
