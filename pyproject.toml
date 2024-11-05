@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "airflow-orchestrator"
+version = "0.1.0"
+description = "eltl-project Airflow-Orchestrator module"
+authors = ["gioreed"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.10"
+apache-airflow = "^2.10.3"
+google-cloud-bigquery = "^3.26.0"
+google-auth = "^2.35.0"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
