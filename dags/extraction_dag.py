@@ -140,9 +140,18 @@ with DAG(
         },
     )
 
+    load_konv_task = PythonOperator(
+        task_id='load_konv_to_bq',
+        python_callable=load_data_to_bq,
+        op_kwargs={
+            'source_file': 'konv.csv',
+            'table_id': 'eltl-pipeline-project.staging.KONV',
+        },
+    )
+  
     # Define task dependencies to run sequentially
     (
         load_vbak_task >> load_vbap_task >> load_vbrk_task >> load_vbrp_task >>
         load_lips_task >> load_ekpo_task >> load_kna1_task >> load_mara_task >>
-        load_makt_task >> load_mard_task >> load_t001w_task
+        load_makt_task >> load_mard_task >> load_t001w_task >> load_konv_task
     )

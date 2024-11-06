@@ -1,3 +1,62 @@
+#services:
+#  postgres:
+#    image: postgres:13
+#    environment:
+#      POSTGRES_USER: airflow
+#      POSTGRES_PASSWORD: airflow
+#      POSTGRES_DB: airflow
+#    volumes:
+#      - postgres_db:/var/lib/postgresql/data
+#
+#  webserver:
+#    image: apache/airflow:2.5.0
+#    environment:
+#      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+#      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+#      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+#      TZ: 'Europe/Rome'
+#    volumes:
+#      - ./dags:/opt/airflow/dags
+#      - ./logs:/opt/airflow/logs
+#      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
+#      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - postgres
+#    command: ["bash", "-c", "pip install -r /requirements.txt && airflow webserver"]
+#
+#  scheduler:
+#    image: apache/airflow:2.5.0
+#    environment:
+#      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+#      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+#      TZ: 'Europe/Rome'
+#    volumes:
+#      - ./dags:/opt/airflow/dags
+#      - ./logs:/opt/airflow/logs
+#      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
+#      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+#    depends_on:
+#      - postgres
+#    command: ["bash", "-c", "pip install -r /requirements.txt && airflow scheduler"]
+#
+#  init:
+#    image: apache/airflow:2.5.0
+#    environment:
+#      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+#      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+#      TZ: 'Europe/Rome'
+#    volumes:
+#      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+#    depends_on:
+#      - postgres
+#    command: ["bash", "-c", "pip install -r /requirements.txt && airflow db init"]
+#    restart: "no"
+#
+#volumes:
+#  postgres_db:
+
 services:
   postgres:
     image: postgres:13
@@ -18,8 +77,8 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
-      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./requirements.txt:/requirements.txt  # Ensure this path is correct
     ports:
       - "8080:8080"
     depends_on:
@@ -35,8 +94,8 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket
-      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./requirements.txt:/requirements.txt
     depends_on:
       - postgres
     command: ["bash", "-c", "pip install -r /requirements.txt && airflow scheduler"]
@@ -48,7 +107,7 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       TZ: 'Europe/Rome'
     volumes:
-      - ./requirements.txt:/requirements.txt  # Add requirements.txt
+      - ./requirements.txt:/requirements.txt
     depends_on:
       - postgres
     command: ["bash", "-c", "pip install -r /requirements.txt && airflow db init"]
