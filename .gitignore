@@ -1,3 +1,6 @@
+#local logs
+logs/dag_processor_manager/dag_processor_manager.log
+
 # Airflow configuration
 airflow.cfg
 airflow_login.py
